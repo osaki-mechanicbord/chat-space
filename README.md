@@ -10,10 +10,11 @@
 
 ### Association
 - has_many :messages
-- has_many :groups
+- has_many :groups,through: :group_users
+- has_many :group_users
 
 
-## membersテーブル
+## group_userテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -47,6 +48,7 @@
 
 ### Association
 
- - has_many :user
-
+ - has_many :users,through: :group_users
+ - has_many :group_users
+   accepts_nested_attributes_for :group_users
 
