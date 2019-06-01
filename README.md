@@ -1,5 +1,6 @@
 # README
 
+
 ## userテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -8,13 +9,14 @@
 |pass|INT|          |
 
 
-### Association
-- has_many :messages
-- has_many :groups,through: :group_users
+### Association   
+- has_many :users, through: :group_users
 - has_many :group_users
 
 
-## group_userテーブル
+
+
+## group_usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -48,7 +50,7 @@
 
 ### Association
 
- - has_many :users,through: :group_users
+ - has_many :users, through: :group_users
  - has_many :group_users
    accepts_nested_attributes_for :group_users
 
