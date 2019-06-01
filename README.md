@@ -1,16 +1,15 @@
 # README
 
 
-## userテーブル
+## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|text|         |
-|email|VARCHAR(M)|  |  
-|pass|INT|          |
+|name|string|null: false, foreign_key: true|
+
 
 
 ### Association   
-- has_many :users, through: :group_users
+- has_many :messages,through: :group_users
 - has_many :group_users
 
 
@@ -40,17 +39,17 @@
 ### Association
 
  - belongs_to :user
+ - belongs_to :group
  
 
- ## groupテーブル
+ ## groupsテーブル
  |Column|Type|Options|
  |------|----|-------|
- |groupname|text|    |
- |user_id|integer|null: false, foreign_key: true|
-
+ |name|string|    |
+ 
 ### Association
 
  - has_many :users, through: :group_users
  - has_many :group_users
-   accepts_nested_attributes_for :group_users
+   
 
