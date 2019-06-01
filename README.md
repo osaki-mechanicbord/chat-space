@@ -1,57 +1,24 @@
 # README
 
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-## userテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|text|         |
-|email|VARCHAR(M)|  |  
-|pass|INT|          |
+Things you may want to cover:
 
+* Ruby version
 
-### Association   
-- has_many :users, through: :group_users
-- has_many :group_users
+* System dependencies
 
+* Configuration
 
+* Database creation
 
+* Database initialization
 
-## group_usersテーブル
+* How to run the test suite
 
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+* Services (job queues, cache servers, search engines, etc.)
 
-### Association
- - belongs_to :group
- - belongs_to :user
+* Deployment instructions
 
-
-## messagesテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|body  |text|       |
-|image |string|     |
-|group_id|integer|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
-
-### Association
-
- - belongs_to :user
- 
-
- ## groupテーブル
- |Column|Type|Options|
- |------|----|-------|
- |groupname|text|    |
- |user_id|integer|null: false, foreign_key: true|
-
-### Association
-
- - has_many :users, through: :group_users
- - has_many :group_users
-   accepts_nested_attributes_for :group_users
-
-
+* ...
