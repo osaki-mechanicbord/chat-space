@@ -1,6 +1,7 @@
 # README
 
 
+
 ## userテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -9,26 +10,31 @@
 |pass|INT|          |
 
 
+Things you may want to cover:
+
+
 ### Association   
 - has_many :users, through: :group_users
 - has_many :group_users
 
 
 
+* System dependencies
+
+
+
 
 ## group_usersテーブル
 
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
 
-### Association
- - belongs_to :group
- - belongs_to :user
+* Database creation
 
+* Database initialization
 
-## messagesテーブル
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
 
 |Column|Type|Options|
 |------|----|-------|
@@ -53,4 +59,6 @@
  - has_many :users, through: :group_users
  - has_many :group_users
    accepts_nested_attributes_for :group_users
+
+
 
