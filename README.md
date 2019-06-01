@@ -44,7 +44,7 @@
  ## groupsテーブル
  |Column|Type|Options|
  |------|----|-------|
- |name|string|    |
+ |name|string|null: false,index: true|
 
 ### Association
 
