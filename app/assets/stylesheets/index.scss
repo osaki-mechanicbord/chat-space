@@ -40,7 +40,8 @@ div {
     }
 }
 
-.chat-side .groups .group__latest-message {
+.chat-side  
+.group__latest-message {
     font-size: 11px;
 }
 
@@ -99,7 +100,7 @@ div {
 }
 
 .chat-main {
-    .chat-main .messages .message__upper-info__date {
+    .message__upper-info__date {
         color: #999999;
         font-size: 12px;
         margin-left: 10px;
@@ -114,8 +115,7 @@ div {
     display: flex;
     justify-content: space-between;
     border-bottom: solid 1px #eee;
-
-    .main-header__edit-btn {
+    &__edit-btn {
         height: 40px;
         line-height: 40px;
         padding: 0 20px;
@@ -170,7 +170,7 @@ div {
 .input-box {
     position: relative;
     width: 100%;
-    .input-box__text {
+    &__text {
         height: 50px;
         width: 100%;
         padding: 0 40px 0 10px;
