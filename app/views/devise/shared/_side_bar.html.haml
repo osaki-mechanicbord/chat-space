@@ -3,7 +3,7 @@
     %p.side-header__user-name 
       = current_user.name
     %ul.user-menu
-      = link_to'/groups/new', class:"new__btn" do
+      = link_to new_group_path, class:"new__btn" do
         = fa_icon 'edit'
       %li.user-menu__new-group
         = link_to '#', class:"edit__btn" do

@@ -27,8 +27,6 @@ $(function(){
             e.preventDefault();
             var formData = new FormData(this);
             var url = $(this).attr('action');
-            console.log(url)
-            console.log(formData)
             $.ajax({
               url: url,
               type: "POST",
@@ -42,7 +40,7 @@ $(function(){
                 var html = buildHTML(data);
                   $(' .messages').append(html);
                   $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
-                  $('.form__message').val('');
+                  $('.form__message').reset();
                   $(".form__submit").prop('disabled', false);
             })
             .fail(function(){
