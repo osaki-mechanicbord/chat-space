@@ -1,0 +1,44 @@
+%body
+  .flash-box 
+    .notice グループを作成しました
+  .wrapper
+    .chat-side
+      .side-header
+        %p.side-header__user-name 尾崎俊行
+        %ul.user-menu
+          = link_to'#', class:"new__btn" do
+            = fa_icon 'edit'
+          %li.user-menu__new-group
+            = link_to '#', class:"edit__btn" do
+              = fa_icon 'cog'
+          -# %li.user-menu__edit-user       
+      .groups
+        = link_to '#' do
+          .group
+            %p.group__group-name e
+            %p.group__latest-message zzzzz
+    .chat-main
+      .main-header
+        .current-group{"data-group_id": '#'}
+          %h2.current-group__name e
+          %ul.member-list
+            Member：
+            %li.member-list__member 尾崎俊行
+        = link_to '#' do
+          .main-header__edit-btn Edit
+      .messages
+        .message
+          .upper-info
+            %p.upper-info__user 尾崎俊行
+            %p.upper-info__date 
+          %p.message__text zzzzz
+  .form
+    %form#new_message.new-message
+     
+      
+      .input-box
+        %input#message_content.input-box__text{placeholder: "type a message", }/
+        %label.image-label{for: "message_image"}
+          %i.fa.fa-image
+          %input#message_image.image-label__input{name: "message[image]", type:"file"}/
+      %input.new-message__submit-btn{"data-disable-with": "Send", name: "commit", type: "submit", value: "Send"}/
