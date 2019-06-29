@@ -98,15 +98,15 @@ div {
     }
 }
 
-// .chat-main {
-//     .message__upper-info__date {
-//         color: #999999;
-//         font-size: 12px;
-//         margin-left: 10px;
-//     }
+.chat-main {
+    .message__upper-info__date {
+        color: #999999;
+        font-size: 12px;
+        margin-left: 10px;
+    }
   
    
-// }
+}
 
 .main-header {
     height: 100px;
@@ -151,157 +151,72 @@ div {
     overflow: scroll;
 }
 
-// .main__footer {
-//     background-color: #f5f5f5;
-//     box-sizing: border-box;
-//     height: 90px;
-//     width: calc(100vw - 300px);
-//     padding-top: 20px;
-//     padding-left: 10px;
-//     display: flex;
-//     position: absolute;
-//     bottom: 0;
-//     &__text {
-//       color: $text-color;
-//       width: 1110px;
-  
-//     }
-//     &__form__mask{
-    
-//     }
-    
-//     &__send-button {
-//         background-color: $button-color;
-//         color: white;
-//         height: 50px;
-//         @include side-p;
-//         text-align: center;
-//         line-height: 50px;
-  
-//     }
-//   }
-  
-//   .icon {
-//   padding-top: 20px;
-//   padding-left: 5px;
-//   padding-right: 5px;
-//   }
-  
-//   .hidden {
-//   display: none;
-//   }
-  
-//   .new_message {
-//     display: flex;
-  
-    
-//   }
+.form {
+    height: 90px;
+    padding: 20px 40px;
+    background-color: #ddd;
+    width: calc(100% - 300px);
+    float: right;
+    * {
+    box-sizing: border-box;
+    }
+}
 
-// .form {
-//     height: 90px;
-//     padding: 20px 40px;
-//     background-color: #ddd;
-//     width: calc(100% - 300px);
-//     float: right;
-//     * {
-//     box-sizing: border-box;
-//     }
-// }
+.new-message {
+    display: flex;
+}
 
-// // .new-message {
-// //     display: flex;
-// // }
+.input-box {
+    position: relative;
+    width: 100%;
+    &__text {
+    height: 50px;
+    width: 100%;
+    padding: 0 40px 0 10px;
+    color: #434a54;
+    border-style: none;
+    }
+}
 
-// .form__mask {
-//     position: relative;
-//     width: 100%;
-//     &__text {
-//     height: 50px;
-//     width: 100%;
-//     padding: 0 40px 0 10px;
-//     color: #434a54;
-//     border-style: none;
-//     }
-// }
+.image-label {
+    font-size: 1.3rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
 
-// .form__mask__image {
-//     font-size: 1.3rem;
-//     position: absolute;
-//     top: 10px;
-//     right: 10px;
-//     cursor: pointer;
-//     &__input{
-//         display: none;
-//     }
-//     .i{
-//         display: inline-block;
-//         font: normal normal normal 14px/1 FontAwesome;
-//         font-size: inherit;
-//         text-rendering: auto;
-//         -webkit-font-smoothing: antialiased;
-//         -moz-osx-font-smoothing: grayscale;
+    .fa {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
         
-//     }
-// }
-// .fa-photo:before, .fa-image:before, .fa-picture-o:before {
-//     content: "\f03e";
-// }
+    }
+}
+.fa-photo:before, .fa-image:before, .fa-picture-o:before {
+    content: "\f03e";
+}
 
-// .image-label__input {
-//     display: none;
-// }
+.image-label__input {
+    display: none;
+}
 
-// .form__submit {
-//     width: 100px;
-//     height: 50px;
-//     padding: 0 30px;
-//     margin-left: 15px;
-//     background-color: #38aef0;
-//     color: white;
-//     cursor: pointer;
-//     input, textarea, select {
-//     font-family: inherit;
-//     font-size: inherit;
-//     font-weight: inherit;
-//     }
-// }
-
-// .form {
-//     background-color: #DDDDDD;
-//     box-sizing: border-box;
-//     height: 90px;
-//     padding: 20px 50px 20px 40px;
-//     &__message {
-//       border: none;
-//       float: left;
-//       height: 50px;
-//       width: calc(100% - 150px);
-//     }
-//     &__mask {
-//       background-color: white;
-//       float: left;
-//       height: 50px;
-//       padding-right: 10px;
-//       &__image {
-//         font-size: 20px;
-//         line-height: 50px;
-//       }
-//       .hidden {
-//         display: none;
-//       }
-//     }
-//     &__submit {
-//       background-color:rgb(26, 189, 243);
-//       border: none;
-//       color: white;
-//       float: right;
-//       font-size: 16px;
-//       height: 50px;
-//       margin-left: 15px;
-//       padding: 0 30px;
-//     }
-//   }
-
+.new-message__submit-btn {
+    width: 100px;
+    height: 50px;
+    padding: 0 30px;
+    margin-left: 15px;
+    background-color: #38aef0;
+    color: white;
+    cursor: pointer;
+    input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    }
+}
 
 
 
