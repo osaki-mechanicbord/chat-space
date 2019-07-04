@@ -1,8 +1,8 @@
 = render 'side_bar' 
 .chat
   .main-header
-    .current-group{"data-group_id": '#'}
-      %h2.current-group__name e
+    .current-group{"data-group_id": @group.id}
+      %h2.current-group__name= @group.name
       %ul.member-list
         Member：
         %li.member-list__member 尾崎俊行
