@@ -74,6 +74,14 @@ $(function(){
               alert('error');
             });
           }
+          var interval = setInterval(function(){
+            // console.log($('.chatroom__body-message').length);
+             if (window.location.href.match(/\/groups\/\d+\/messages/)){
+               autoUpdate();
+             } else {
+               clearInterval(interval);
+             }
+            }, 5000)
           
-          setInterval(reloadMessages, 5000);
+          // setInterval(reloadMessages, 5000);
 });
