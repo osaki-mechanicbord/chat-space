@@ -85,7 +85,7 @@ $(function(){
           var interval = setInterval(function(){
             // console.log($('.chatroom__body-message').length);
              if (window.location.href.match(/\/groups\/\d+\/messages/)){
-               autoUpdate();
+              reloadMessages();
              } else {
                clearInterval(interval);
              }
