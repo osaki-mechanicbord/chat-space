@@ -1,3 +1,4 @@
+$(document).on('turbolinks:load', function() {
 $(function(){
   var buildHTML = function(message) {
     image = ( message.image ) ? `<asset_path src=${message.image} >` : "";
@@ -33,6 +34,7 @@ $(function(){
         processData: false,
         contentType: false
       })
+    
       .done(function(data){
 
           var html = buildHTML(data);
@@ -40,8 +42,14 @@ $(function(){
             $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
             $('#new_message')[0].reset();
             $(".form__submit").prop('disabled', false);   
+
+          })
+          .fail(function(){
+            alert('error');
+      
         });
       });
+    
 
         var reloadMessages = function() {
           //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
@@ -83,5 +91,7 @@ $(function(){
              }
             }, 5000)
           
-          // setInterval(reloadMessages, 5000);
+           // setInterval(reloadMessages, 5000);
 });
+
+})
