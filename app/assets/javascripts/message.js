@@ -73,7 +73,8 @@ $(function(){
         messages.forEach(function(message){
            html += buildHTML(message)
         });
-
+        
+        $('.messages').append(html);
         $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
         
       
