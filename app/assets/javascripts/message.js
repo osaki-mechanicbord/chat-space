@@ -1,5 +1,4 @@
 $(document).on('turbolinks:load', function() {
-$(function(){
   var buildHTML = function(message) {
     image = ( message.image ) ? `<asset_path src=${message.image} >` : "";
       //data-idが反映されるようにしている
@@ -21,7 +20,10 @@ $(function(){
        ${image}
     </div>`
     return html;  
-  }  
+}
+
+
+
     $('#new_message').on('submit',function(e) {
       e.preventDefault();
       var formData = new FormData(this);
@@ -34,6 +36,7 @@ $(function(){
         processData: false,
         contentType: false
       })
+
     
       .done(function(data){
 
@@ -46,16 +49,19 @@ $(function(){
           })
           .fail(function(){
             alert('error');
-      
-        });
+          })
+        
       });
     
 
         var reloadMessages = function() {
           //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
+          
           var last_message_id = $('.message:last').data('message-id');
           
           var groupId= $('.current-group').data('group_id')
+          if($('div').hasClass('form')){
+
           $.ajax({
           
             url: `/groups/${groupId}/api/messages`,
@@ -64,35 +70,30 @@ $(function(){
             dataType: 'json',
             
             data: {id: last_message_id}
-          
           })
+          
           .done(function(messages) {
             
           var html = '';
       
         messages.forEach(function(message){
            html += buildHTML(message)
-        });
+        })
         
         $('.messages').append(html);
         $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
         
-      
-            })
+          })
+         
             .fail(function(){
               alert('error');
-            });
-          }
-          var interval = setInterval(function(){
-            // console.log($('.chatroom__body-message').length);
-             if (window.location.href.match(/\/groups\/\d+\/messages/)){
-              reloadMessages();
-             } else {
-               clearInterval(interval);
-             }
-            }, 5000)
+            })
+
+          };
+        }
+          setInterval(reloadMessages,
+            5000);
+
           
            // setInterval(reloadMessages, 5000);
 });
-
-})
