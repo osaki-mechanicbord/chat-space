@@ -1,4 +1,5 @@
-$(document).on('turbolinks:load', function() {
+$(function() { 
+  // (document).on('turbolinks:load', 
   var buildHTML = function(message) {
     image = ( message.image ) ? `<asset_path src=${message.image} >` : "";
       //data-idが反映されるようにしている
@@ -21,7 +22,6 @@ $(document).on('turbolinks:load', function() {
     </div>`
     return html;  
 }
-
 
 
     $('#new_message').on('submit',function(e) {
