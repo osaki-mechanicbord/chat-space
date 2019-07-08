@@ -1,6 +1,6 @@
 $(document).on('turbolinks:load', function() {
   var buildHTML = function(message) {
-    image = ( message.image ) ? `<asset_path src=${message.image} >` : "";
+    image = ( message.image ) ? `<img src=${message.image} >` : "";
       //data-idが反映されるようにしている
       var html =
       `<div class="message">
