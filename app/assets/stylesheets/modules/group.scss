@@ -96,9 +96,11 @@
       
       display: inline-block;
       cursor: pointer;
+        float:right;
 
       &.chat-group-user__btn--add {
         color: #38aef0;
+        
       }
 
       &.chat-group-user__btn--remove {

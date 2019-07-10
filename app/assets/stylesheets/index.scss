@@ -33,7 +33,6 @@ div {
         text-decoration-line: none;
         text-decoration-style: initial;
         text-decoration-color: initial;
-        padding-bottom: 40px;
         * {
             box-sizing: border-box;
         }
@@ -85,7 +84,6 @@ div {
     background-color: #2f3e51;
     padding: 20px 20px 0;
     overflow: scroll;
-    
 }
 
 .group__group-name {
@@ -97,7 +95,6 @@ div {
         margin-block-end: 1em;
         margin-inline-start: 0px;
         margin-inline-end: 0px;
-       
     }
 }
 
@@ -222,8 +219,8 @@ div {
 }
 
 .group__message{
-    margin-bottom: 40px;
-}
+        margin-bottom: 40px;
+    }
 
 
 
