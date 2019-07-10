@@ -3,8 +3,7 @@ $(function () {
     var member_list = $("#member_search_result");
 
     function appendUsers(user) {
-        var html = `<div class='chat-group-user clearfix js-chat-member'>
-                <div class='chat-group-form__field--right'>
+        var html = `<div class='chat-group-user clearfix'>
                 <p class="chat-group-user__name">
                 ${user.name}
                 </p>
@@ -24,8 +23,12 @@ $(function () {
     }
 
     $(function () {
-        $(".chat-group-form__input").on("keyup", function () {
+        $(".chat-group-form__input").on("input", function () {
             var input = $("#user-search-field").val();
+            if (!input){
+                $("#user_search_result").empty();
+                return false;
+            }
             $.ajax({
                 type: 'GET',
                 url: '/users',
