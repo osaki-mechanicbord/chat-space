@@ -3,7 +3,7 @@ $(document).on('turbolinks:load', function() {
     image = ( message.image ) ? `<img src=${message.image} >` : "";
       //data-idが反映されるようにしている
       var html =
-      `<div class="message">
+      `<div class="message" data-message-id= "${message.id}">
       <div class="upper-message">
         <div class="upper-message__user-name">
           ${message.user_name}
@@ -41,6 +41,7 @@ $(document).on('turbolinks:load', function() {
       .done(function(data){
 
           var html = buildHTML(data);
+          console.log(html)
             $('.messages').append(html);
             $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
             $('#new_message')[0].reset();
@@ -58,6 +59,7 @@ $(document).on('turbolinks:load', function() {
           //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
           
           var last_message_id = $('.message:last').data('message-id');
+          console.log(last_message_id)
           
           var groupId= $('.current-group').data('group_id')
           if($('div').hasClass('form')){
@@ -73,11 +75,13 @@ $(document).on('turbolinks:load', function() {
           })
           
           .done(function(messages) {
+            // console.table(messages)
             
           var html = '';
       
         messages.forEach(function(message){
            html += buildHTML(message)
+          //  console.log(message)
         })
         
         $('.messages').append(html);
