@@ -81,8 +81,10 @@ $(document).on('turbolinks:load', function() {
            html += buildHTML(message)
           //  console.log(message)
         })
-        
-        $('.messages').append(html);
+        if(html != ""){
+          $('.messages').append(html);
+          $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+        }
         
         
           })
