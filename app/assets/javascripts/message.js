@@ -37,6 +37,8 @@ $(document).on('turbolinks:load', function() {
         contentType: false
       })
 
+      
+
     
       .done(function(data){
 
@@ -50,6 +52,7 @@ $(document).on('turbolinks:load', function() {
           })
           .fail(function(){
             alert('error');
+            $(".form__submit").prop('disabled', false);
           })
         
       });
@@ -99,5 +102,5 @@ $(document).on('turbolinks:load', function() {
             5000);
 
           
-           // setInterval(reloadMessages, 5000);
+          
 });
