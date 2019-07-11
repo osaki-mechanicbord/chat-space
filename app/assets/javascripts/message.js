@@ -85,7 +85,10 @@ $(document).on('turbolinks:load', function() {
         })
         
         $('.messages').append(html);
-        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+
+        form_reset();                     
+                scroll_view();
+        // $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
         
           })
          
