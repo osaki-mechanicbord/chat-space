@@ -57,7 +57,6 @@ $(document).on('turbolinks:load', function() {
 
         var reloadMessages = function() {
           //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
-          
           var last_message_id = $('.message:last').data('message-id');
        
           
@@ -75,7 +74,6 @@ $(document).on('turbolinks:load', function() {
           })
           
           .done(function(messages) {
-            // console.table(messages)
             
           var html = '';
       
@@ -85,10 +83,7 @@ $(document).on('turbolinks:load', function() {
         })
         
         $('.messages').append(html);
-
-        form_reset();                     
-                scroll_view();
-        // $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+        
         
           })
          
