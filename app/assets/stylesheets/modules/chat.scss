@@ -1,6 +1,7 @@
 .chat {
     width: calc(100% - 300px);
     float: right;
+    
     .header {
       box-sizing: border-box;
       height: 100px;
@@ -42,7 +43,8 @@
       background-color: #FAFAFA;
       box-sizing: border-box;
       padding: 46px 40px 0;
-      height: calc(100vh - 190px);
+      height: calc(100vh - 166px);
+      clear: both;
       .message {
         .upper-message {
           display: flex;
@@ -63,6 +65,7 @@
             color: $black;
             font-size: 14px;
             margin-bottom: 40px;
+            clear: both;
           }
         }
       }
@@ -76,6 +79,8 @@
       height: 90px;
       width: calc(100% - 300px);
       padding: 20px 50px 20px 40px;
+      clear: both;
+
       &__message {
         border: none;
         float: left;
