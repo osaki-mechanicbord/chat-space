@@ -160,26 +160,26 @@ div {
   }
 }
 
-// .messages {
-//     height: calc(100vh - 166px);
-//     padding: 46px 40px;
-//     background-color: #fafafa;
-//     overflow: scroll;
-//     clear: both;
-// }
+.messages {
+    height: calc(100vh - 166px);
+    padding: 46px 40px;
+    background-color: #fafafa;
+    overflow: scroll;
+    clear: both;
+}
 
-// .form {
-//     height: 90px;
-//     padding: 20px 40px;
-//     background-color: #ddd;
-//     width: calc(100% - 300px);
-//     float: right;
-//     clear: both;
+.form {
+    height: 90px;
+    padding: 20px 40px;
+    background-color: #ddd;
+    width: calc(100% - 300px);
+    float: right;
+    clear: both;
     
-//     * {
-//     box-sizing: border-box;
-//     }
-// }
+    * {
+    box-sizing: border-box;
+    }
+}
 
 // .new-message {
 //     display: flex;
